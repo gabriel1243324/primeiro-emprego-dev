@@ -1,4 +1,4 @@
-let horasAtuais = 12;
+let horasAtuais = 14;
 let meta = 100;
 
 console.log(`Você estudou: ${horasAtuais}h`);

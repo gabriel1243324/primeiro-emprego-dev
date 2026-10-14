@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Gabriel - Dev Junior</title>
+<head><meta charset="UTF-8"><title>Gabriel 15h</title>
 <style>
-body{font-family:Arial;background:#0f172a;color:white;display:flex;justify-content:center;padding:40px}
-.card{background:#1e293b;padding:30px;border-radius:16px;width:350px;text-align:center}
+body{font-family:Arial;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px}
+.card{background:#1e293b;padding:30px;border-radius:16px;width:380px}
 .bar{background:#334155;height:22px;border-radius:11px;overflow:hidden;margin:15px 0}
-.fill{background:#22c55e;height:100%;width:12%;transition:0.5s}
-input{padding:8px;border-radius:8px;border:none;width:80px;text-align:center}
-button{padding:8px 12px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-left:5px}
-small{color:#94a3b8}
+.fill{background:#22c55e;height:100%;width:15%}
+input,textarea{padding:10px;border-radius:8px;border:none;width:100%;margin-top:10px;box-sizing:border-box}
+button{padding:12px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-top:10px;width:100%}
+.error{color:#f87171;font-size:12px;display:none}
 </style>
 </head>
 <body>
 <div class="card">
-<h2>Gabriel Tierling</h2>
-<p>Desenvolvedor Junior em Formação</p>
-<div class="bar"><div id="fill" class="fill"></div></div>
-<p><span id="horas">12</span>h / 100h - <span id="perc">12</span>%</p>
-<div>
-<input id="novaHora" type="number" placeholder="ex: 2">
-<button onclick="addHora()">+ adicionar</button>
-</div>
-<p><small>Meta: 100h honestas | 【entity-GitHub¦canonical_name=GitHub】 com commits diários</small></p>
+<h2>Gabriel - 15h / 100h</h2>
+<div class="bar"><div class="fill"></div></div>
+<h3>Fale comigo</h3>
+<input id="nome" placeholder="Seu nome">
+<p id="erroNome" class="error">⚠️ Digite seu nome</p>
+<input id="email" placeholder="Seu email">
+<p id="erroEmail" class="error">⚠️ Email precisa ter @</p>
+<textarea id="msg" placeholder="Sua mensagem"></textarea>
+<p id="erroMsg" class="error">⚠️ Digite uma mensagem</p>
+<button onclick="enviar()">Enviar mensagem</button>
 </div>
 <script>
-let horas = localStorage.getItem('horas') ? Number(localStorage.getItem('horas')) : 12;
-function atualizar(){
- let perc = Math.min(100, Math.round(horas));
- document.getElementById('horas').innerText = horas;
- document.getElementById('perc').innerText = perc;
- document.getElementById('fill').style.width = perc + '%';
- localStorage.setItem('horas', horas);
+function enviar(){
+ let n=document.getElementById('nome').value;
+ let e=document.getElementById('email').value;
+ let m=document.getElementById('msg').value;
+ document.getElementById('erroNome').style.display=n?'none':'block';
+ document.getElementById('erroEmail').style.display=e.includes('@')?'none':'block';
+ document.getElementById('erroMsg').style.display=m?'none':'block';
+ if(n&&e.includes('@')&&m){alert('VALIDOU! Aula 7 feita!');}
 }
-function addHora(){
- let n = Number(document.getElementById('novaHora').value);
- if(n>0){ horas += n; atualizar(); document.getElementById('novaHora').value=''; }
-}
-atualizar();
 </script>
 </body>
 </html>

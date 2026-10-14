@@ -2,12 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
 <title>Gabriel - Dev Junior</title>
 <style>
 body{font-family:Arial;background:#0f172a;color:white;display:flex;justify-content:center;padding:40px}
 .card{background:#1e293b;padding:30px;border-radius:16px;width:350px;text-align:center}
-.bar{background:#334155;height:20px;border-radius:10px;overflow:hidden;margin:15px 0}
+.bar{background:#334155;height:22px;border-radius:11px;overflow:hidden;margin:15px 0}
 .fill{background:#22c55e;height:100%;width:12%;transition:0.5s}
 input{padding:8px;border-radius:8px;border:none;width:80px;text-align:center}
 button{padding:8px 12px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-left:5px}
@@ -20,14 +19,16 @@ small{color:#94a3b8}
 <p>Desenvolvedor Junior em Formação</p>
 <div class="bar"><div id="fill" class="fill"></div></div>
 <p><span id="horas">12</span>h / 100h - <span id="perc">12</span>%</p>
+<div>
 <input id="novaHora" type="number" placeholder="ex: 2">
 <button onclick="addHora()">+ adicionar</button>
-<p><small>Meta: 100h honestas | GitHub com commits diários</small></p>
+</div>
+<p><small>Meta: 100h honestas | 【entity-GitHub¦canonical_name=GitHub】 com commits diários</small></p>
 </div>
 <script>
 let horas = localStorage.getItem('horas') ? Number(localStorage.getItem('horas')) : 12;
 function atualizar(){
- let perc = Math.min(100, Math.round(horas/100*100));
+ let perc = Math.min(100, Math.round(horas));
  document.getElementById('horas').innerText = horas;
  document.getElementById('perc').innerText = perc;
  document.getElementById('fill').style.width = perc + '%';

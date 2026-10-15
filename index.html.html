@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gabriel - 16h / 100h</title>
+<style>
+body{font-family:Arial;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px}
+.card{background:#1e293b;padding:30px;border-radius:16px;width:380px}
+.bar{background:#334155;height:22px;border-radius:11px;overflow:hidden;margin:15px 0}
+.fill{background:#22c55e;height:100%;width:16%}
+input,textarea{padding:10px;border-radius:8px;border:none;width:100%;margin-top:10px;box-sizing:border-box}
+button{padding:12px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-top:10px;width:100%;font-size:16px}
+.error{color:#f87171;font-size:12px;display:none;margin-top:5px}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>Gabriel - 16h / 100h</h2>
+<div class="bar"><div class="fill"></div></div>
+<p>Formulario funcionando!</p>
+<input id="nome" placeholder="Seu nome">
+<p id="erroNome" class="error">Digite seu nome</p>
+<input id="email" placeholder="Seu email">
+<p id="erroEmail" class="error">Email precisa ter @</p>
+<textarea id="msg" rows="4" placeholder="Sua mensagem"></textarea>
+<p id="erroMsg" class="error">Digite uma mensagem</p>
+<button onclick="enviar()">Enviar mensagem</button>
+<p id="ok" style="color:#22c55e;display:none;text-align:center;margin-top:15px;font-weight:bold">Abrindo seu email... Se nao abrir, permita pop-ups!</p>
+</div>
+<script>
+function enviar(){
+ let nome = document.getElementById('nome').value.trim();
+ let email = document.getElementById('email').value.trim();
+ let msg = document.getElementById('msg').value.trim();
+ document.getElementById('erroNome').style.display = nome ? 'none':'block';
+ document.getElementById('erroEmail').style.display = email.includes('@') ? 'none':'block';
+ document.getElementById('erroMsg').style.display = msg ? 'none':'block';
+ if(!nome || !email.includes('@') || !msg){ return; }
+ document.getElementById('ok').style.display = 'block';
+ let assunto = "Contato do Portfolio - " + nome;
+ let corpo = "Nome: " + nome + "\nEmail: " + email + "\nMensagem: " + msg;
+ let gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=ademirgabrieltierlingdasilva@gmail.com&su=" + encodeURIComponent(assunto) + "&body=" + encodeURIComponent(corpo);
+ window.open(gmailUrl, "_blank");
+}
+</script>
+</body>
+</html>

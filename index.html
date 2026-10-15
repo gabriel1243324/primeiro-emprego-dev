@@ -3,28 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriel - 20h / 100h</title>
+<title>Gabriel - 25h / 100h</title>
 <style>
-body{font-family:Arial;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px;min-height:100vh;align-items:center}
-.card{background:#1e293b;padding:30px;border-radius:16px;width:380px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+*{box-sizing:border-box}
+body{font-family:Arial;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px;min-height:100vh;align-items:center;margin:0}
+.card{background:#1e293b;padding:30px;border-radius:16px;width:100%;max-width:400px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 .bar{background:#334155;height:22px;border-radius:11px;overflow:hidden;margin:15px 0}
-.fill{background:#22c55e;height:100%;width:20%}
+.fill{background:#22c55e;height:100%;width:25%;transition:width .5s}
 .bio{color:#cbd5e1;font-size:14px;line-height:1.5;margin-bottom:15px}
-input,textarea{padding:10px;border-radius:8px;border:none;width:100%;margin-top:10px;box-sizing:border-box;font-size:14px}
-textarea{resize:vertical}
+input,textarea{padding:12px;border-radius:8px;border:none;width:100%;margin-top:10px;font-size:14px}
+textarea{resize:vertical;min-height:80px}
 button{padding:12px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-top:10px;width:100%;font-size:16px}
 button:hover{background:#16a34a}
+button:active{transform:scale(.98)}
 .error{color:#f87171;font-size:12px;display:none;margin-top:5px}
-.links{margin-top:20px;display:flex;justify-content:center;gap:12px;font-size:13px}
-.links a{color:#94a3b8;text-decoration:none}
-.links a:hover{color:#22c55e}
+.links{margin-top:20px;display:flex;justify-content:center;gap:12px;font-size:13px;flex-wrap:wrap}
+.links a{color:#94a3b8;text-decoration:none;padding:4px 8px;border-radius:6px;background:#0f172a}
+.links a:hover{color:#22c55e;background:#334155}
 .skills{margin-top:15px;display:flex;gap:6px;flex-wrap:wrap}
-.tag{background:#334155;color:#cbd5e1;padding:4px 8px;border-radius:12px;font-size:11px}
+.tag{background:#334155;color:#cbd5e1;padding:5px 10px;border-radius:12px;font-size:11px;font-weight:bold}
+.projetos{margin-top:20px;padding-top:15px;border-top:1px solid #334155}
+.projetos h3{font-size:14px;color:#e2e8f0;margin:0 0 10px 0}
+.proj{background:#0f172a;padding:10px 12px;border-radius:8px;margin-top:8px;font-size:13px;color:#94a3b8}
+.proj b{color:#e2e8f0}
+@media(max-width:500px){.card{padding:20px} body{padding:10px;align-items:flex-start;padding-top:20px}}
 </style>
 </head>
 <body>
 <div class="card">
-<h2>Gabriel - 20h / 100h</h2>
+<h2>Gabriel - 25h / 100h</h2>
 <div class="bar"><div class="fill"></div></div>
 <p class="bio">Comecei pra aprender, sem pressão. Fiz 16h e curti. Agora tô indo atrás das 100h pra primeira vaga.</p>
 <div class="skills">
@@ -32,7 +39,17 @@ button:hover{background:#16a34a}
 <span class="tag">CSS</span>
 <span class="tag">JavaScript</span>
 <span class="tag">Git / GitHub</span>
+<span class="tag">Responsivo</span>
 </div>
+
+<div class="projetos">
+<h3>🚀 Evolução</h3>
+<div class="proj"><b>Aula 3:</b> Site no ar + domínio github.io</div>
+<div class="proj"><b>Aula 4:</b> Bio honesta que conecta</div>
+<div class="proj"><b>Aula 5:</b> Formulário que envia pro meu email</div>
+<div class="proj"><b>Aula 6:</b> Layout responsivo no celular</div>
+</div>
+
 <br>
 <input id="nome" placeholder="Seu nome">
 <p id="erroNome" class="error">Digite seu nome</p>
@@ -44,8 +61,7 @@ button:hover{background:#16a34a}
 <p id="ok" style="color:#22c55e;display:none;text-align:center;margin-top:15px;font-weight:bold">Abrindo seu email... Se nao abrir, permita pop-ups!</p>
 <div class="links">
 <a href="https://github.com/gabriel1243324" target="_blank">GitHub</a>
-<span style="color:#334155">•</span>
-<a href="https://github.com/gabriel1243324/primeiro-emprego-dev" target="_blank">Código do site</a>
+<a href="https://github.com/gabriel1243324/primeiro-emprego-dev" target="_blank">Código</a>
 </div>
 </div>
 <script>

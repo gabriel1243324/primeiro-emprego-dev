@@ -29,7 +29,6 @@ button.small.danger{background:#ef4444;color:white}
 .sec h3{font-size:12px;color:#e2e8f0;margin:0 0 8px 0;text-transform:uppercase;letter-spacing:.5px}
 .item{background:#0f172a;padding:10px;border-radius:9px;margin-top:6px;font-size:12px;color:#94a3b8;border:1px solid transparent}
 .item b{color:#e2e8f0;display:block;margin-bottom:2px}
-.item .meta{font-size:10px;color:#64748b;margin-top:3px}
 .badge{background:#22c55e;color:#0f172a;padding:1px 5px;border-radius:5px;font-size:9px;font-weight:bold;margin-left:5px}
 .todo-input{display:flex;gap:6px;margin-top:8px}
 .todo-input input{margin:0;flex:1}
@@ -44,7 +43,6 @@ button.small.danger{background:#ef4444;color:white}
 </head>
 <body>
 <div class="container">
-
 <div class="card">
 <h2 style="margin:0;font-size:20px">Gabriel - 35h / 100h</h2>
 <div class="bar"><div class="fill"></div></div>
@@ -57,7 +55,6 @@ button.small.danger{background:#ef4444;color:white}
 <span class="tag">Responsivo</span>
 <span class="tag">LocalStorage</span>
 </div>
-
 <div class="sec">
 <h3>🚀 Evolução - 35h</h3>
 <div class="item"><b>Aula 5: Contato real <span class="badge">FEITO</span></b>Formulário pro Gmail funcionando</div>
@@ -66,7 +63,6 @@ button.small.danger{background:#ef4444;color:white}
 <div class="item" style="border:1px solid #22c55e"><b>Aula 8: Lista de Tarefas <span class="badge">AGORA</span></b>Projeto real com JS + localStorage</div>
 </div>
 </div>
-
 <div class="card">
 <div class="sec" style="margin:0;padding:0;border:none">
 <h3>📝 Projeto Aula 8: Lista de Tarefas</h3>
@@ -78,7 +74,6 @@ button.small.danger{background:#ef4444;color:white}
 <div id="todoList" class="todo-list"></div>
 </div>
 </div>
-
 <div class="card">
 <input id="nome" placeholder="Seu nome">
 <p id="erroNome" class="error">Digite seu nome</p>
@@ -93,10 +88,8 @@ button.small.danger{background:#ef4444;color:white}
 <a href="https://github.com/gabriel1243324/primeiro-emprego-dev" target="_blank">Código</a>
 </div>
 </div>
-
 </div>
 <script>
-// Form contato
 function enviar(){
  let nome = document.getElementById('nome').value.trim();
  let email = document.getElementById('email').value.trim();
@@ -111,7 +104,6 @@ function enviar(){
  let gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=ademirgabrieltierlingdasilva@gmail.com&su=" + encodeURIComponent(assunto) + "&body=" + encodeURIComponent(corpo);
  window.open(gmailUrl, "_blank");
 }
-// Todo App
 let todos = JSON.parse(localStorage.getItem('gabriel_todos')||'[]');
 function save(){ localStorage.setItem('gabriel_todos', JSON.stringify(todos)); }
 function render(){

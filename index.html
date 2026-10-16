@@ -1,18 +1,16 @@
 function calcAdd(caractere){
-  calcValor += caractere;
-  display.innerText = calcValor;
-}
-
-function calcClear(){
-  calcValor = '';
-  display.innerText = '0';
-}
-
-function calcResult(){
-  try {
-    calcValor = eval(calcValor).toString();
+    calcValor += caractere;
     display.innerText = calcValor;
-  } catch {
-    display.innerText = 'Erro';
-  }
+}
+function calcClear(){
+    calcValor ='';
+    display.innerText = '0';
+}
+function calcResult(){
+    try{
+        calcValor = eval(calcValor).toString();
+        display.innerText = calcValor;
+    } catch {
+        display.innerText = 'Erro';
+    }
 }

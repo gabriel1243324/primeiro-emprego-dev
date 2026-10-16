@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriel - 45h / 100h</title>
+<title>Gabriel - 50h / 100h</title>
 <style>
 *{box-sizing:border-box}
 body{font-family:Arial;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px;min-height:100vh;margin:0}
@@ -11,69 +11,47 @@ body{font-family:Arial;background:#0f172a;color:white;display:flex;justify-conte
 .card{background:#1e293b;padding:22px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.3);margin-bottom:12px}
 .bar{background:#334155;height:22px;border-radius:11px;overflow:hidden;margin:10px 0}
 .fill{background:#22c55e;height:100%;width:45%;transition:width .5s}
-.bio{color:#cbd5e1;font-size:12px;line-height:1.5;margin-bottom:8px}
-input,textarea{padding:10px;border-radius:8px;border:none;width:100%;margin-top:6px;font-size:12px}
-textarea{resize:vertical;min-height:60px}
-button{padding:10px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-top:6px;width:100%;font-size:13px;color:#0f172a}
-button:hover{background:#16a34a}
-button.small{width:auto;padding:5px 9px;font-size:10px;margin:0;background:#334155;color:#cbd5e1}
-button.calc{width:48px;height:48px;font-size:18px;margin:3px;background:#334155;color:white}
+.calc-display{background:#0f172a;color:#22c55e;font-size:28px;text-align:right;padding:12px;border-radius:8px;margin-bottom:8px;min-height:50px}
+.calc-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2px}
+button.calc{width:48px;height:48px;font-size:18px;margin:3px;background:#334155;color:white;border:none;border-radius:8px;cursor:pointer}
 button.calc.op{background:#22c55e;color:#0f172a}
 button.calc.clear{background:#ef4444;color:white}
-.error{color:#f87171;font-size:10px;display:none;margin-top:3px}
-.links{display:flex;justify-content:center;gap:6px;font-size:11px;flex-wrap:wrap;margin-top:10px}
-.links a{color:#94a3b8;text-decoration:none;padding:4px 8px;border-radius:6px;background:#0f172a}
-.skills{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
-.tag{background:#334155;color:#cbd5e1;padding:3px 8px;border-radius:10px;font-size:9px;font-weight:bold}
-.sec{margin-top:12px;padding-top:10px;border-top:1px solid #334155}
-.sec h3{font-size:11px;color:#e2e8f0;margin:0 0 6px 0;text-transform:uppercase}
-.item{background:#0f172a;padding:9px;border-radius:8px;margin-top:5px;font-size:11px;color:#94a3b8}
-.item b{color:#e2e8f0;display:block}
-.badge{background:#22c55e;color:#0f172a;padding:1px 4px;border-radius:4px;font-size:8px;font-weight:bold;margin-left:4px}
-.todo-input{display:flex;gap:5px;margin-top:6px}
-.todo-input input{margin:0;flex:1}
-.todo-list{margin-top:8px}
 .todo-item{display:flex;align-items:center;gap:6px;background:#0f172a;padding:6px 8px;border-radius:7px;margin-top:4px;font-size:12px}
-.todo-item.done{opacity:.6}
-.todo-item.done span{text-decoration:line-through}
-.todo-item span{flex:1}
-.calc-display{background:#0f172a;color:#22c55e;font-size:28px;text-align:right;padding:12px;border-radius:8px;margin-bottom:8px;min-height:50px;letter-spacing:1px}
-.calc-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2px}
-.todo-item input[type=checkbox]{width:14px;height:14px;margin:0}
 </style>
 </head>
 <body>
 <div class="container">
-<div class="card">
-<h2 style="margin:0;font-size:19px">Gabriel - 45h / 100h</h2>
-<div class="bar"><div class="fill"></div></div>
-<p class="bio">Primeira aula CODANDO de verdade! 3 funcoes escritas por mim! 45h em 2h reais!</p>
-<div class="skills"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Calculadora</span><span class="tag">LocalStorage</span></div>
-<div class="sec"><h3>🚀 Evolução - 45h</h3>
-<div class="item"><b>Aula 8: Lista <span class="badge">FEITO</span></b>LocalStorage</div>
-<div class="item"><b>Aula 9: Melhorias <span class="badge">FEITO</span></b>Design</div>
-<div class="item" style="border:1px solid #22c55e"><b>Aula 10: Calculadora <span class="badge">CODADO</span></b>Minhas 3 funcoes!</div>
-</div></div>
-<div class="card"><div class="sec" style="margin:0;padding:0;border:none"><h3>📝 Lista de Tarefas</h3>
-<div class="todo-input"><input id="todoText" placeholder="Ex: Estudar JS 2h"><button class="small" onclick="addTodo()" style="background:#22c55e;color:#0f172a;padding:10px 12px">+</button></div><div id="todoList" class="todo-list"></div></div></div>
-<div class="card"><div class="sec" style="margin:0;padding:0;border:none"><h3>🧮 Calculadora - CODADA POR MIM!</h3>
-<div id="calcDisplay" class="calc-display">0</div>
+<div class="card"><h2 style="margin:0;font-size:19px">Gabriel - 50h / 100h</h2><div class="bar"><div class="fill" style="width:50%"></div></div><p style="color:#cbd5e1;font-size:12px">Aula 11 - Conversor de Moeda - VOCE VAI CODAR! 50h em 2h reais!</p></div>
+<div class="card"><h3>🧮 Calculadora - CODADA!</h3><div id="calcDisplay" class="calc-display">0</div>
 <div class="calc-grid">
 <button class="calc clear" onclick="calcClear()">C</button><button class="calc" onclick="calcAdd('/')">/</button><button class="calc" onclick="calcAdd('*')">x</button><button class="calc" onclick="calcAdd('-')">-</button>
 <button class="calc" onclick="calcAdd('7')">7</button><button class="calc" onclick="calcAdd('8')">8</button><button class="calc" onclick="calcAdd('9')">9</button><button class="calc op" onclick="calcAdd('+')">+</button>
 <button class="calc" onclick="calcAdd('4')">4</button><button class="calc" onclick="calcAdd('5')">5</button><button class="calc" onclick="calcAdd('6')">6</button><button class="calc op" onclick="calcResult()">=</button>
-<button class="calc" onclick="calcAdd('1')">1</button><button class="calc" onclick="calcAdd('2')">2</button><button class="calc" onclick="calcAdd('3')">3</button><button class="calc" onclick="calcAdd('0')">0</button>
-<button class="calc" style="width:100px" onclick="calcAdd('.')">.</button>
-</div></div></div>
-<div class="card"><input id="nome" placeholder="Seu nome"><input id="email" placeholder="Seu email"><textarea id="msg" rows="2" placeholder="Sua mensagem"></textarea><button onclick="enviar()">Enviar mensagem</button></div>
+<button class="calc" onclick="calcAdd('1')">1</button><button class="calc" onclick="calcAdd('2')">2</button><button class="calc" onclick="calcAdd('3')">3</button><button class="calc" onclick="calcAdd('0')">0</button><button class="calc" style="width:100px" onclick="calcAdd('.')">.</button>
+</div></div>
+<div class="card"><input id="nome" placeholder="Seu nome"><input id="email" placeholder="Seu email"><textarea id="msg" placeholder="Sua mensagem"></textarea><div class="card" style="border:1px solid #22c55e"><h3 style="margin:0 0 8px 0;font-size:13px">💱 Aula 11: Conversor R$ -> US$ (VOCE CODA)</h3><p style="font-size:10px;color:#fbbf24;margin:0 0 6px 0">Escreva a funcao converter() no final do arquivo!</p><input id="reais" type="number" placeholder="Valor em Reais (ex: 100)" style="padding:10px;border-radius:8px;border:none;width:100%"><button onclick="converter()" style="padding:12px;border:none;border-radius:8px;background:#22c55e;width:100%;font-weight:bold;margin-top:6px;color:#0f172a">Converter pra Dólar</button><div id="resultadoDolar" style="background:#0f172a;color:#22c55e;font-size:20px;text-align:center;padding:10px;border-radius:8px;margin-top:8px;min-height:40px">US$ 0.00</div></div><div class="card"><input id="nome" placeholder="Seu nome"><input id="email" placeholder="Seu email"><textarea id="msg" placeholder="Sua mensagem"></textarea><button onclick="enviar()" style="padding:12px;border:none;border-radius:8px;background:#22c55e;width:100%;font-weight:bold;margin-top:6px">Enviar mensagem</button></div>
 </div>
 <script>
-function enviar(){let nome=document.getElementById('nome').value.trim();let email=document.getElementById('email').value.trim();let msg=document.getElementById('msg').value.trim();if(!nome||!email.includes('@')||!msg)return;let assunto="Contato do Portfolio - "+nome;let corpo="Nome: "+nome+"\nEmail: "+email+"\nMensagem: "+msg;let gmailUrl="https://mail.google.com/mail/?view=cm&fs=1&to=ademirgabrieltierlingdasilva@gmail.com&su="+encodeURIComponent(assunto)+"&body="+encodeURIComponent(corpo);window.open(gmailUrl,"_blank");}
-let todos=JSON.parse(localStorage.getItem('gabriel_todos')||'[]');function save(){localStorage.setItem('gabriel_todos',JSON.stringify(todos));}function render(){let list=document.getElementById('todoList');list.innerHTML='';todos.forEach((t,i)=>{let div=document.createElement('div');div.className='todo-item'+(t.done?' done':'');div.innerHTML=`<input type="checkbox" ${t.done?'checked':''} onchange="toggle(${i})"><span>${t.text}</span><button class="small" style="background:#ef4444;color:white" onclick="remove(${i})">x</button>`;list.appendChild(div);});}function addTodo(){let input=document.getElementById('todoText');let text=input.value.trim();if(!text)return;todos.push({text,done:false});input.value='';save();render();}function toggle(i){todos[i].done=!todos[i].done;save();render();}function remove(i){todos.splice(i,1);save();render();}document.getElementById('todoText').addEventListener('keypress',e=>{if(e.key==='Enter')addTodo();});render();
-let display = document.getElementById('calcDisplay');let calcValor = '';
-function calcAdd(caractere){calcValor += caractere;display.innerText = calcValor;}
-function calcClear(){calcValor = '';display.innerText = '0';}
-function calcResult(){try{calcValor = eval(calcValor).toString();display.innerText = calcValor;}catch{display.innerText = 'Erro';}}
+function enviar(){let n=document.getElementById('nome').value.trim();let e=document.getElementById('email').value.trim();let m=document.getElementById('msg').value.trim();if(!n||!e.includes('@')||!m)return;let a="Contato - "+n;let c="Nome: "+n+"\nEmail: "+e+"\nMsg: "+m;let u="https://mail.google.com/mail/?view=cm&fs=1&to=ademirgabrieltierlingdasilva@gmail.com&su="+encodeURIComponent(a)+"&body="+encodeURIComponent(c);window.open(u,"_blank");}
+let display=document.getElementById('calcDisplay');let calcValor='';
+function calcAdd(caractere){calcValor+=caractere;display.innerText=calcValor;}
+function calcClear(){calcValor='';display.innerText='0';}
+function calcResult(){try{calcValor=eval(calcValor).toString();display.innerText=calcValor;}catch{display.innerText='Erro';}}
+
+// =========================================================
+// AULA 11 - 50h - AQUI VOCE VAI CODAR! 👇
+// Missao: converter Reais pra Dolar
+// 1 dolar = 5.50 reais (exemplo)
+// =========================================================
+function converter(){
+  // TODO: pegar valor do input id="reais"
+  // DICA: document.getElementById('reais').value
+  // TODO: transformar em numero com Number()
+  // TODO: dividir por 5.5 pra virar dolar
+  // TODO: mostrar em id="resultadoDolar" com innerText
+  // ESCREVA 4 LINHAS AQUI EMBAIXO:
+  
+}
 </script>
 </body>
 </html>

@@ -3,22 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriel - 20h / 100h</title>
+<title>Gabriel - 25h / 100h</title>
 <style>
 body{font-family:Arial;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px;min-height:100vh;margin:0}
-.card{background:#1e293b;padding:30px;border-radius:16px;width:400px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.card{background:#1e293b;padding:30px;border-radius:16px;width:420px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
 .bar{background:#334155;height:22px;border-radius:11px;overflow:hidden;margin:15px 0}
-.fill{background:#22c55e;height:100%;width:20%;transition:width 1s}
+.fill{background:#22c55e;height:100%;width:25%;transition:width 1s}
 .bio{color:#cbd5e1;font-size:14px;line-height:1.6;margin:12px 0 18px 0}
 .skills{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}
 .skill{background:#334155;color:#e2e8f0;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:bold}
-.links{display:flex;gap:12px;margin:18px 0;font-size:13px}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0;font-size:13px}
 .links a{color:#22c55e;text-decoration:none;font-weight:bold}
 .links a:hover{text-decoration:underline}
-.divider{height:1px;background:#334155;margin:20px 0}
-input,textarea{padding:12px;border-radius:8px;border:none;width:100%;margin-top:10px;box-sizing:border-box;background:#0f172a;color:white;border:1px solid #334155}
+.divider{height:1px;background:#334155;margin:22px 0}
+.projects{display:grid;gap:12px;margin:15px 0}
+.proj{background:#0f172a;border:1px solid #334155;border-radius:12px;padding:16px}
+.proj h4{margin:0 0 6px 0;font-size:14px}
+.proj p{margin:0;color:#94a3b8;font-size:12px;line-height:1.4}
+.proj .tag{margin-top:8px;display:inline-block;background:#1e293b;padding:3px 8px;border-radius:10px;font-size:10px;color:#22c55e}
+input,textarea{padding:12px;border-radius:8px;width:100%;margin-top:10px;box-sizing:border-box;background:#0f172a;color:white;border:1px solid #334155}
 input:focus,textarea:focus{outline:none;border-color:#22c55e}
-button{padding:12px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-top:12px;width:100%;font-size:16px;transition:background 0.2s}
+button{padding:12px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-top:12px;width:100%;font-size:16px}
 button:hover{background:#16a34a}
 .error{color:#f87171;font-size:12px;display:none;margin-top:5px}
 .ok{color:#22c55e;display:none;text-align:center;margin-top:15px;font-weight:bold}
@@ -26,7 +31,7 @@ button:hover{background:#16a34a}
 </head>
 <body>
 <div class="card">
-<h2>Gabriel - 20h / 100h</h2>
+<h2>Gabriel - 25h / 100h</h2>
 <div class="bar"><div class="fill"></div></div>
 <p class="bio">Comecei pra aprender, sem pressão. Fiz 16h e curti. Agora tô indo atrás das 100h pra primeira vaga.</p>
 
@@ -40,6 +45,22 @@ button:hover{background:#16a34a}
 <div class="links">
 <a href="https://github.com/gabriel1243324" target="_blank">GitHub</a>
 <a href="https://github.com/gabriel1243324/primeiro-emprego-dev" target="_blank">Código do site</a>
+</div>
+
+<div class="divider"></div>
+
+<h3 style="margin:0 0 10px 0;font-size:16px">Projetos</h3>
+<div class="projects">
+<div class="proj">
+<h4>🚀 Portfólio 100h</h4>
+<p>Meu site de evolução de 0 a 100h. Cada aula aumenta a barra. Feito com HTML, CSS e JS puro.</p>
+<span class="tag">Aula 6 - em andamento</span>
+</div>
+<div class="proj">
+<h4>💡 Próximo projeto</h4>
+<p>Calculadora / Lista de tarefas / Clone de interface. A definir na Aula 7-8.</p>
+<span class="tag">Em breve</span>
+</div>
 </div>
 
 <div class="divider"></div>

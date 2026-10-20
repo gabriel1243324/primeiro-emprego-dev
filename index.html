@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriel - 35h / 100h</title>
+<title>Gabriel - 40h / 100h</title>
 <style>
 *{box-sizing:border-box}
 body{font-family:Arial,sans-serif;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px;min-height:100vh;margin:0}
-.card{background:#1e293b;padding:28px;border-radius:16px;width:100%;max-width:480px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.card{background:#1e293b;padding:28px;border-radius:16px;width:100%;max-width:500px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
 .bar{background:#334155;height:24px;border-radius:12px;overflow:hidden;margin:16px 0}
-.fill{background:linear-gradient(90deg,#22c55e,#16a34a);height:100%;width:35%;transition:width 1s;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;font-weight:bold}
+.fill{background:linear-gradient(90deg,#22c55e,#16a34a);height:100%;width:40%;transition:width 1s;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;font-weight:bold}
 .bio{color:#cbd5e1;font-size:14px;line-height:1.6;margin:14px 0 18px 0}
 .skills{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
 .skill{background:#334155;color:#e2e8f0;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:bold;border:1px solid #475569}
@@ -29,6 +29,14 @@ body{font-family:Arial,sans-serif;background:#0f172a;color:white;display:flex;ju
 .todo-list li{background:#1e293b;padding:10px 12px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;font-size:13px;border:1px solid #334155}
 .todo-list li.done{opacity:0.6;text-decoration:line-through}
 .todo-list li button{background:none;border:none;color:#f87171;cursor:pointer;font-size:14px;padding:2px 6px}
+/* Calculadora */
+.calc-display{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:14px;text-align:right;font-size:20px;min-height:50px;margin-top:10px;word-break:break-all}
+.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.calc-grid button{padding:14px;border:none;border-radius:8px;background:#334155;color:white;font-weight:bold;cursor:pointer;font-size:15px}
+.calc-grid button.op{background:#475569}
+.calc-grid button.eq{background:#22c55e;color:#0f172a}
+.calc-grid button.clear{background:#ef4444}
+.calc-grid button:hover{opacity:0.8}
 input,textarea{padding:12px;border-radius:8px;width:100%;margin-top:10px;background:#0f172a;color:white;border:1px solid #334155;font-family:Arial}
 input:focus,textarea:focus{outline:none;border-color:#22c55e}
 .btn-main{padding:13px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-top:14px;width:100%;font-size:16px}
@@ -40,8 +48,8 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 </head>
 <body>
 <div class="card">
-<h2>Gabriel - 35h / 100h</h2>
-<div class="bar"><div class="fill">35%</div></div>
+<h2>Gabriel - 40h / 100h</h2>
+<div class="bar"><div class="fill">40%</div></div>
 <p class="bio">Comecei pra aprender, sem pressão. Fiz 16h e curti. Agora tô indo atrás das 100h pra primeira vaga.</p>
 
 <div class="skills">
@@ -49,8 +57,8 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 <span class="skill">CSS</span>
 <span class="skill">JavaScript</span>
 <span class="skill">Git / GitHub</span>
-<span class="skill">Responsivo</span>
 <span class="skill">LocalStorage</span>
+<span class="skill">Calculadora</span>
 </div>
 
 <div class="links">
@@ -65,18 +73,46 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 <div class="projects">
 <div class="proj">
 <h4>🚀 Portfólio 100h</h4>
-<p>Meu site principal. Evolução de 0 a 100h com novas features a cada aula.</p>
-<span class="tag">35% - Aula 8</span>
+<p>Site principal evoluindo a cada aula. Agora 40% completo.</p>
+<span class="tag">40% - Aula 9</span>
 </div>
+
 <div class="proj">
-<h4>✅ Mini To-Do List - NOVO</h4>
-<p>Segundo projeto real! Lista de tarefas que salva no navegador. Feita com JS + localStorage.</p>
+<h4>✅ To-Do List</h4>
 <div class="todo-input">
 <input id="todoInput" placeholder="Nova tarefa...">
-<button class="btn-main" onclick="addTodo()" style="margin:0">Add</button>
+<button class="btn-main" onclick="addTodo()" style="margin:0;width:auto;padding:10px 16px;font-size:13px">Add</button>
 </div>
 <ul id="todoList" class="todo-list"></ul>
-<span class="tag">Projeto 2 - JS Puro</span>
+<span class="tag">JS + LocalStorage</span>
+</div>
+
+<div class="proj">
+<h4>🧮 Calculadora - NOVO</h4>
+<p>Terceiro projeto real. Calculadora funcional com JS.</p>
+<div id="calcDisplay" class="calc-display">0</div>
+<div class="calc-grid">
+<button class="clear" onclick="calcClear()">C</button>
+<button onclick="calcDel()">⌫</button>
+<button class="op" onclick="calcAdd('%')">%</button>
+<button class="op" onclick="calcAdd('/')">÷</button>
+<button onclick="calcAdd('7')">7</button>
+<button onclick="calcAdd('8')">8</button>
+<button onclick="calcAdd('9')">9</button>
+<button class="op" onclick="calcAdd('*')">×</button>
+<button onclick="calcAdd('4')">4</button>
+<button onclick="calcAdd('5')">5</button>
+<button onclick="calcAdd('6')">6</button>
+<button class="op" onclick="calcAdd('-')">−</button>
+<button onclick="calcAdd('1')">1</button>
+<button onclick="calcAdd('2')">2</button>
+<button onclick="calcAdd('3')">3</button>
+<button class="op" onclick="calcAdd('+')">+</button>
+<button onclick="calcAdd('0')">0</button>
+<button onclick="calcAdd('.')">.</button>
+<button class="eq" style="grid-column: span 2" onclick="calcEquals()">=</button>
+</div>
+<span class="tag">Projeto 3 - Lógica JS</span>
 </div>
 </div>
 
@@ -94,7 +130,7 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 </div>
 
 <script>
-// --- Todo List ---
+// Todo
 let todos = JSON.parse(localStorage.getItem('todos_gabriel') || '[]');
 function renderTodos(){
  const ul = document.getElementById('todoList');
@@ -120,7 +156,27 @@ function removeTodo(i){ todos.splice(i,1); renderTodos(); }
 document.getElementById('todoInput').addEventListener('keypress', e=>{ if(e.key==='Enter') addTodo(); });
 renderTodos();
 
-// --- Form ---
+// Calculadora
+let calcVal = '';
+function updateCalc(){
+ document.getElementById('calcDisplay').innerText = calcVal || '0';
+}
+function calcAdd(v){ calcVal += v; updateCalc(); }
+function calcClear(){ calcVal=''; updateCalc(); }
+function calcDel(){ calcVal = calcVal.slice(0,-1); updateCalc(); }
+function calcEquals(){
+ try{
+   let expr = calcVal.replace(/%/g,'/100');
+   let res = Function('"use strict";return ('+expr+')')();
+   calcVal = String(res).slice(0,12);
+   updateCalc();
+ } catch(e){
+   calcVal=''; document.getElementById('calcDisplay').innerText='Erro';
+ }
+}
+updateCalc();
+
+// Form
 function enviar(){
  let nome = document.getElementById('nome').value.trim();
  let email = document.getElementById('email').value.trim();

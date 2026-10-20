@@ -3,30 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriel - 30h / 100h</title>
+<title>Gabriel - 35h / 100h</title>
 <style>
 *{box-sizing:border-box}
-body{font-family:Arial, sans-serif;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px;min-height:100vh;margin:0}
-.card{background:#1e293b;padding:28px;border-radius:16px;width:100%;max-width:460px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
-.bar{background:#334155;height:24px;border-radius:12px;overflow:hidden;margin:16px 0;position:relative}
-.fill{background:linear-gradient(90deg,#22c55e,#16a34a);height:100%;width:30%;transition:width 1s;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;font-weight:bold}
+body{font-family:Arial,sans-serif;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px;min-height:100vh;margin:0}
+.card{background:#1e293b;padding:28px;border-radius:16px;width:100%;max-width:480px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.bar{background:#334155;height:24px;border-radius:12px;overflow:hidden;margin:16px 0}
+.fill{background:linear-gradient(90deg,#22c55e,#16a34a);height:100%;width:35%;transition:width 1s;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;font-weight:bold}
 .bio{color:#cbd5e1;font-size:14px;line-height:1.6;margin:14px 0 18px 0}
 .skills{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
-.skill{background:#334155;color:#e2e8f0;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:bold;border:1px solid #475569}
-.links{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0;font-size:13px}
+.skill{background:#334155;color:#e2e8f0;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:bold;border:1px solid #475569}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0;font-size:12px}
 .links a{color:#22c55e;text-decoration:none;font-weight:bold;padding:6px 10px;background:#0f172a;border-radius:8px;border:1px solid #334155}
 .links a:hover{background:#22c55e;color:#0f172a}
 .divider{height:1px;background:#334155;margin:22px 0}
-.projects{display:grid;gap:12px;margin:15px 0}
-.proj{background:#0f172a;border:1px solid #334155;border-radius:12px;padding:16px;transition:transform 0.2s}
-.proj:hover{transform:translateY(-2px);border-color:#22c55e}
+.projects{display:grid;gap:14px;margin:15px 0}
+.proj{background:#0f172a;border:1px solid #334155;border-radius:12px;padding:16px}
 .proj h4{margin:0 0 6px 0;font-size:14px}
 .proj p{margin:0;color:#94a3b8;font-size:12px;line-height:1.5}
 .proj .tag{margin-top:8px;display:inline-block;background:#1e293b;padding:4px 10px;border-radius:10px;font-size:10px;color:#22c55e;font-weight:bold}
+.todo-input{display:flex;gap:8px;margin-top:12px}
+.todo-input input{margin:0;flex:1}
+.todo-input button{width:auto;margin:0;padding:10px 16px;font-size:13px}
+.todo-list{list-style:none;padding:0;margin:12px 0 0 0;display:grid;gap:6px}
+.todo-list li{background:#1e293b;padding:10px 12px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;font-size:13px;border:1px solid #334155}
+.todo-list li.done{opacity:0.6;text-decoration:line-through}
+.todo-list li button{background:none;border:none;color:#f87171;cursor:pointer;font-size:14px;padding:2px 6px}
 input,textarea{padding:12px;border-radius:8px;width:100%;margin-top:10px;background:#0f172a;color:white;border:1px solid #334155;font-family:Arial}
 input:focus,textarea:focus{outline:none;border-color:#22c55e}
-button{padding:13px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-top:14px;width:100%;font-size:16px}
-button:hover{background:#16a34a}
+.btn-main{padding:13px;border:none;border-radius:8px;background:#22c55e;font-weight:bold;cursor:pointer;margin-top:14px;width:100%;font-size:16px}
+.btn-main:hover{background:#16a34a}
 .error{color:#f87171;font-size:12px;display:none;margin-top:5px}
 .ok{color:#22c55e;display:none;text-align:center;margin-top:15px;font-weight:bold;background:#0f172a;padding:10px;border-radius:8px;border:1px solid #22c55e}
 @media(max-width:500px){.card{padding:20px} body{padding:12px}}
@@ -34,8 +40,8 @@ button:hover{background:#16a34a}
 </head>
 <body>
 <div class="card">
-<h2>Gabriel - 30h / 100h</h2>
-<div class="bar"><div class="fill">30%</div></div>
+<h2>Gabriel - 35h / 100h</h2>
+<div class="bar"><div class="fill">35%</div></div>
 <p class="bio">Comecei pra aprender, sem pressão. Fiz 16h e curti. Agora tô indo atrás das 100h pra primeira vaga.</p>
 
 <div class="skills">
@@ -44,6 +50,7 @@ button:hover{background:#16a34a}
 <span class="skill">JavaScript</span>
 <span class="skill">Git / GitHub</span>
 <span class="skill">Responsivo</span>
+<span class="skill">LocalStorage</span>
 </div>
 
 <div class="links">
@@ -57,30 +64,63 @@ button:hover{background:#16a34a}
 <h3 style="margin:0 0 12px 0;font-size:16px">📁 Projetos</h3>
 <div class="projects">
 <div class="proj">
-<h4>🚀 Portfólio 100h - 30%</h4>
-<p>Site evoluindo de 0 a 100h. Agora com projetos, skills, responsivo e 30% concluído. HTML, CSS, JS puro + GitHub Pages.</p>
-<span class="tag">Aula 7 - 30h</span>
+<h4>🚀 Portfólio 100h</h4>
+<p>Meu site principal. Evolução de 0 a 100h com novas features a cada aula.</p>
+<span class="tag">35% - Aula 8</span>
 </div>
 <div class="proj">
-<h4>💡 Próximo: Lista de Tarefas</h4>
-<p>Projeto 2 será uma To-Do List com localStorage. Aulas 8-10.</p>
-<span class="tag">Em breve</span>
+<h4>✅ Mini To-Do List - NOVO</h4>
+<p>Segundo projeto real! Lista de tarefas que salva no navegador. Feita com JS + localStorage.</p>
+<div class="todo-input">
+<input id="todoInput" placeholder="Nova tarefa...">
+<button class="btn-main" onclick="addTodo()" style="margin:0">Add</button>
+</div>
+<ul id="todoList" class="todo-list"></ul>
+<span class="tag">Projeto 2 - JS Puro</span>
 </div>
 </div>
 
 <div class="divider"></div>
 
+<h3 style="margin:0 0 12px 0;font-size:15px">📩 Contato</h3>
 <input id="nome" placeholder="Seu nome">
 <p id="erroNome" class="error">Digite seu nome</p>
 <input id="email" placeholder="Seu email">
 <p id="erroEmail" class="error">Email precisa ter @</p>
-<textarea id="msg" rows="4" placeholder="Sua mensagem"></textarea>
+<textarea id="msg" rows="3" placeholder="Sua mensagem"></textarea>
 <p id="erroMsg" class="error">Digite uma mensagem</p>
-<button onclick="enviar()">Enviar mensagem</button>
+<button class="btn-main" onclick="enviar()">Enviar mensagem</button>
 <p id="ok" class="ok">✓ Abrindo seu email... Se não abrir, permita pop-ups!</p>
 </div>
 
 <script>
+// --- Todo List ---
+let todos = JSON.parse(localStorage.getItem('todos_gabriel') || '[]');
+function renderTodos(){
+ const ul = document.getElementById('todoList');
+ ul.innerHTML = '';
+ todos.forEach((t,i)=>{
+   const li = document.createElement('li');
+   li.className = t.done ? 'done' : '';
+   li.innerHTML = `<span onclick="toggleTodo(${i})" style="cursor:pointer;flex:1">${t.text}</span><button onclick="removeTodo(${i})">✕</button>`;
+   ul.appendChild(li);
+ });
+ localStorage.setItem('todos_gabriel', JSON.stringify(todos));
+}
+function addTodo(){
+ const inp = document.getElementById('todoInput');
+ const text = inp.value.trim();
+ if(!text) return;
+ todos.push({text, done:false});
+ inp.value='';
+ renderTodos();
+}
+function toggleTodo(i){ todos[i].done = !todos[i].done; renderTodos(); }
+function removeTodo(i){ todos.splice(i,1); renderTodos(); }
+document.getElementById('todoInput').addEventListener('keypress', e=>{ if(e.key==='Enter') addTodo(); });
+renderTodos();
+
+// --- Form ---
 function enviar(){
  let nome = document.getElementById('nome').value.trim();
  let email = document.getElementById('email').value.trim();

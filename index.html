@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriel - 40h / 100h</title>
+<title>Gabriel - 45h / 100h</title>
 <style>
 *{box-sizing:border-box}
 body{font-family:Arial,sans-serif;background:#0f172a;color:white;display:flex;justify-content:center;padding:20px;min-height:100vh;margin:0}
-.card{background:#1e293b;padding:28px;border-radius:16px;width:100%;max-width:500px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
-.bar{background:#334155;height:24px;border-radius:12px;overflow:hidden;margin:16px 0}
-.fill{background:linear-gradient(90deg,#22c55e,#16a34a);height:100%;width:40%;transition:width 1s;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;font-weight:bold}
-.bio{color:#cbd5e1;font-size:14px;line-height:1.6;margin:14px 0 18px 0}
+.card{background:#1e293b;padding:28px;border-radius:16px;width:100%;max-width:520px;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.bar{background:#334155;height:26px;border-radius:13px;overflow:hidden;margin:16px 0}
+.fill{background:linear-gradient(90deg,#22c55e,#16a34a);height:100%;width:45%;transition:width 1s;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-size:12px;font-weight:bold}
+.bio{color:#cbd5e1;font-size:14px;line-height:1.7;margin:14px 0 18px 0;background:#0f172a;padding:14px;border-radius:10px;border:1px solid #334155}
 .skills{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
 .skill{background:#334155;color:#e2e8f0;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:bold;border:1px solid #475569}
 .links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0;font-size:12px}
-.links a{color:#22c55e;text-decoration:none;font-weight:bold;padding:6px 10px;background:#0f172a;border-radius:8px;border:1px solid #334155}
+.links a{color:#22c55e;text-decoration:none;font-weight:bold;padding:7px 12px;background:#0f172a;border-radius:8px;border:1px solid #334155}
 .links a:hover{background:#22c55e;color:#0f172a}
 .divider{height:1px;background:#334155;margin:22px 0}
 .projects{display:grid;gap:14px;margin:15px 0}
@@ -29,7 +29,6 @@ body{font-family:Arial,sans-serif;background:#0f172a;color:white;display:flex;ju
 .todo-list li{background:#1e293b;padding:10px 12px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;font-size:13px;border:1px solid #334155}
 .todo-list li.done{opacity:0.6;text-decoration:line-through}
 .todo-list li button{background:none;border:none;color:#f87171;cursor:pointer;font-size:14px;padding:2px 6px}
-/* Calculadora */
 .calc-display{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:14px;text-align:right;font-size:20px;min-height:50px;margin-top:10px;word-break:break-all}
 .calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
 .calc-grid button{padding:14px;border:none;border-radius:8px;background:#334155;color:white;font-weight:bold;cursor:pointer;font-size:15px}
@@ -43,14 +42,27 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 .btn-main:hover{background:#16a34a}
 .error{color:#f87171;font-size:12px;display:none;margin-top:5px}
 .ok{color:#22c55e;display:none;text-align:center;margin-top:15px;font-weight:bold;background:#0f172a;padding:10px;border-radius:8px;border:1px solid #22c55e}
+.status{background:linear-gradient(135deg,#0f172a,#1e293b);border:1px solid #22c55e;border-radius:12px;padding:14px;margin:16px 0;display:flex;justify-content:space-between;font-size:12px}
+.status div{text-align:center}
+.status strong{display:block;font-size:16px;color:#22c55e}
 @media(max-width:500px){.card{padding:20px} body{padding:12px}}
 </style>
 </head>
 <body>
 <div class="card">
-<h2>Gabriel - 40h / 100h</h2>
-<div class="bar"><div class="fill">40%</div></div>
-<p class="bio">Comecei pra aprender, sem pressão. Fiz 16h e curti. Agora tô indo atrás das 100h pra primeira vaga.</p>
+<h2>Gabriel - 45h / 100h</h2>
+<div class="bar"><div class="fill">45%</div></div>
+
+<div class="status">
+<div><strong>45h</strong>Estudadas</div>
+<div><strong>3</strong>Projetos</div>
+<div><strong>6</strong>Skills</div>
+<div><strong>55h</strong>Restantes</div>
+</div>
+
+<div class="bio">
+<b>Sobre mim:</b> Comecei pra aprender, sem pressão. Fiz 16h e curti o processo. Hoje tô em 45h, com 3 projetos em JS puro e foco total nas 100h pra primeira vaga de dev. Aprendendo todo dia com Git, HTML, CSS e JavaScript.
+</div>
 
 <div class="skills">
 <span class="skill">HTML</span>
@@ -58,13 +70,14 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 <span class="skill">JavaScript</span>
 <span class="skill">Git / GitHub</span>
 <span class="skill">LocalStorage</span>
-<span class="skill">Calculadora</span>
+<span class="skill">DOM</span>
+<span class="skill">Responsivo</span>
 </div>
 
 <div class="links">
 <a href="https://github.com/gabriel1243324" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-<a href="https://github.com/gabriel1243324/primeiro-emprego-dev" target="_blank">Código</a>
+<a href="https://github.com/gabriel1243324/primeiro-emprego-dev" target="_blank">Código Fonte</a>
 </div>
 
 <div class="divider"></div>
@@ -72,9 +85,9 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 <h3 style="margin:0 0 12px 0;font-size:16px">📁 Projetos</h3>
 <div class="projects">
 <div class="proj">
-<h4>🚀 Portfólio 100h</h4>
-<p>Site principal evoluindo a cada aula. Agora 40% completo.</p>
-<span class="tag">40% - Aula 9</span>
+<h4>🚀 Portfólio 100h - 45%</h4>
+<p>Projeto principal. Evolução documentada de 0 a 100h com commits no GitHub.</p>
+<span class="tag">Aula 10 - 45h</span>
 </div>
 
 <div class="proj">
@@ -84,12 +97,11 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 <button class="btn-main" onclick="addTodo()" style="margin:0;width:auto;padding:10px 16px;font-size:13px">Add</button>
 </div>
 <ul id="todoList" class="todo-list"></ul>
-<span class="tag">JS + LocalStorage</span>
+<span class="tag">LocalStorage + JS</span>
 </div>
 
 <div class="proj">
-<h4>🧮 Calculadora - NOVO</h4>
-<p>Terceiro projeto real. Calculadora funcional com JS.</p>
+<h4>🧮 Calculadora</h4>
 <div id="calcDisplay" class="calc-display">0</div>
 <div class="calc-grid">
 <button class="clear" onclick="calcClear()">C</button>
@@ -112,7 +124,7 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 <button onclick="calcAdd('.')">.</button>
 <button class="eq" style="grid-column: span 2" onclick="calcEquals()">=</button>
 </div>
-<span class="tag">Projeto 3 - Lógica JS</span>
+<span class="tag">Lógica + DOM</span>
 </div>
 </div>
 
@@ -130,7 +142,6 @@ input:focus,textarea:focus{outline:none;border-color:#22c55e}
 </div>
 
 <script>
-// Todo
 let todos = JSON.parse(localStorage.getItem('todos_gabriel') || '[]');
 function renderTodos(){
  const ul = document.getElementById('todoList');
@@ -156,11 +167,8 @@ function removeTodo(i){ todos.splice(i,1); renderTodos(); }
 document.getElementById('todoInput').addEventListener('keypress', e=>{ if(e.key==='Enter') addTodo(); });
 renderTodos();
 
-// Calculadora
 let calcVal = '';
-function updateCalc(){
- document.getElementById('calcDisplay').innerText = calcVal || '0';
-}
+function updateCalc(){ document.getElementById('calcDisplay').innerText = calcVal || '0'; }
 function calcAdd(v){ calcVal += v; updateCalc(); }
 function calcClear(){ calcVal=''; updateCalc(); }
 function calcDel(){ calcVal = calcVal.slice(0,-1); updateCalc(); }
@@ -176,7 +184,6 @@ function calcEquals(){
 }
 updateCalc();
 
-// Form
 function enviar(){
  let nome = document.getElementById('nome').value.trim();
  let email = document.getElementById('email').value.trim();
